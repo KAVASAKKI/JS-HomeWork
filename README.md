@@ -1,3 +1,4 @@
 # JS-HomeWork
- JavaScript HomeWork\n
+ JavaScript HomeWork
+ 
 Hello from GitHub Desktop!
