@@ -6,16 +6,17 @@ const Transaction = {
 const account = {
   balance: 0,
   transactions: [],
+  id: 0,
 
   createTransaction(amount, type) {
-    const newTransaction = {};
-
-    newTransaction.amount = amount;
-    newTransaction.type = type;
+    id++;
+    const newTransaction = {
+      id,
+      amount,
+      type,
+    };
 
     transactions.push(newTransaction);
-
-    newTransaction.id = transactions.indexOf(newTransaction) + 1;
 
     if (newTransaction.type === 'deposit') {
       balance += amount;
@@ -25,9 +26,11 @@ const account = {
 
     return newTransaction;
   },
+
   deposit(amount) {
     this.createTransaction(amount, DEPOSIT);
   },
+
   withdraw(amount) {
     if (amount > balance) {
       return console.log(
@@ -37,15 +40,18 @@ const account = {
       this.createTransaction(amount, WITHDRAW);
     }
   },
+
   getBalance() {
     return `Текущий баланс: ${balance}`;
   },
+
   getTransactions() {
     console.log('История транзакций: ');
     for (const transaction of transactions) {
       console.log(transaction);
     }
   },
+
   getTransactionDetails(id) {
     console.log(`Результат поиска транзакции по id "${id}":`);
     for (const transaction of transactions) {
@@ -54,6 +60,7 @@ const account = {
       }
     }
   },
+
   getTransactionTotal(type) {
     console.log(`Результат поиска транзакции по типу "${type}":`);
     for (const transaction of transactions) {
@@ -64,7 +71,7 @@ const account = {
   },
 };
 
-let { balance, transactions } = account; //Деструкция обьектов
+let { balance, transactions, id } = account; //Деструкция обьектов
 const { DEPOSIT, WITHDRAW } = Transaction;
 
 account.createTransaction(3000, DEPOSIT); //Создание транзакции
