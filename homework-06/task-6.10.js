@@ -1,17 +1,9 @@
 console.table(users);
 
-const getSortedUniqueSkills = users => {
-  const sortAllSkills = users
+const getSortedUniqueSkills = users =>
+  users
     .reduce((allSkills, user) => [...allSkills, ...user.skills], [])
-    .sort((prevUser, nextUser) => {
-      const result = prevUser < nextUser;
-
-      if (result) return -1;
-      if (!result) return 1;
-    });
-  return sortAllSkills.filter(
-    (item, pos) => sortAllSkills.indexOf(item) === pos,
-  );
-};
+    .sort((prevUser, nextUser) => (prevUser < nextUser ? 1 : -1))
+    .filter((item, pos, a) => pos === a.indexOf(item));
 
 console.log(getSortedUniqueSkills(users));
