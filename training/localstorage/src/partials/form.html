@@ -1,0 +1,45 @@
+<form class="form">
+  <label for="name" class="form__label">Имя</label>
+  <div class="form__field">
+    <input type="text" class="form__input" id="name" autocomplete="off" />
+    <svg class="form__icon form__icon--person">
+      <use href="./images/other-icons/sprite-contact-form.svg#icon-person"></use>
+    </svg>
+  </div>
+
+  <label for="tel" class="form__label">Телефон</label>
+  <div class="form__field">
+    <input type="tel" class="form__input" id="tel" autocomplete="off" />
+    <svg class="form__icon form__icon--phone">
+      <use href="./images/other-icons/sprite-contact-form.svg#icon-phone"></use>
+    </svg>
+  </div>
+
+  <label for="email" class="form__label">Почта</label>
+  <div class="form__field">
+    <input type="email" class="form__input" id="email" autocomplete="off" />
+    <svg class="form__icon form__icon--email">
+      <use href="./images/other-icons/sprite-contact-form.svg#icon-mail"></use>
+    </svg>
+  </div>
+
+  <label for="comment" class="form__label">Комментарий</label>
+  <div class="form__field">
+    <textarea
+      id="message"
+      class="form__input form__input--comment"
+      placeholder="Введите текст"
+    ></textarea>
+  </div>
+
+  <label class="checkbox">
+    <input class="checkbox__input" type="checkbox" name="license" id="checkbox" />
+    <span class="checkbox__icon"></span>
+    <span class="checkbox__text"
+      >Соглашаюсь с рассылкой и принимаю
+      <span class="checkbox__text checkbox__text--link">Условия договора</span>
+    </span>
+  </label>
+
+  <button class="form__submit-button">Отправить</button>
+</form>
