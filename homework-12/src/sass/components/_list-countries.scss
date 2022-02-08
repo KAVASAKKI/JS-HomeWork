@@ -1,0 +1,15 @@
+.search-result__items {
+  list-style: none;
+  padding: 0px 20px;
+}
+
+.search-result__item {
+  padding: 5px;
+
+  border-right: 2px solid rgb(13, 154, 236);
+  border-left: 2px solid rgb(13, 154, 236);
+  border-top: 2px solid rgb(13, 154, 236);
+  &:last-child {
+    border-bottom: 2px solid rgb(13, 154, 236);
+  }
+}

@@ -1,0 +1,23 @@
+.country {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__flag-image {
+    box-shadow: 4px 0px 10px 0px rgba(34, 60, 80, 0.4);
+  }
+
+  &__subtitle--value {
+    font-weight: normal;
+  }
+}
