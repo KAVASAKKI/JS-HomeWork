@@ -28,7 +28,7 @@ function onSearch(e) {
   } else clearSearchResult();
 }
 
-const processingRequest = response => {
+function processingRequest(response) {
   if (response.status === 404) {
     clearSearchResult();
     console.error('Error 404. Not Found!');
@@ -49,7 +49,7 @@ const processingRequest = response => {
       text: `По вашему запросу было найдено: ${response.length} результатов`,
     });
   }
-};
+}
 
 function renderMarkup(response) {
   if (response.length > 1 && response.length < 10) {
