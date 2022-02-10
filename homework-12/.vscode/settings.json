@@ -1,0 +1,12 @@
+{
+  "liveServer.settings.multiRootWorkspaceName": "HTML",
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+
+  "editor.fontLigatures": false,
+  "editor.fontFamily": "Fira code",
+  "editor.fontSize": 15,
+  "workbench.colorTheme": "Palenight Theme",
+
+  "liveServer.settings.port": 7777
+}
